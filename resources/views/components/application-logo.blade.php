@@ -1,0 +1,9 @@
+<svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
+    <circle cx="25" cy="25" r="24" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+    
+    <rect x="13" y="22" width="6" height="14" rx="1" fill="#93C5FD"/>
+    <rect x="22" y="16" width="6" height="20" rx="1" fill="#60A5FA"/>
+    <rect x="31" y="12" width="6" height="24" rx="1" fill="#2563EB"/>
+    
+    <path d="M10 40H40" stroke="#1E40AF" stroke-width="2" stroke-linecap="round"/>
+</svg>
