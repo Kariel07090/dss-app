@@ -13,6 +13,8 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::delete('/criteria-delete-all', [CriterionController::class, 'deleteAll'])->name('criteria.deleteAll');
+    Route::delete('/alternatives-delete-all', [AlternativeController::class, 'deleteAll'])->name('alternatives.deleteAll');
     Route::get('/download-pdf', [SpkController::class, 'downloadPDF'])->name('download.pdf');
     // 1. Dashboard Utama (SPK) dengan Pagination Ganda
     Route::get('/dashboard', function () {

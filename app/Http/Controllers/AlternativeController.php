@@ -55,4 +55,9 @@ class AlternativeController extends Controller
 
         return redirect()->back()->with('success', 'Kandidat berhasil dihapus!');
     }
+    public function deleteAll()
+    {
+        \App\Models\Alternative::query()->delete();
+        return redirect()->back()->with('success', 'Semua data kandidat berhasil dihapus!');
+    }
 }

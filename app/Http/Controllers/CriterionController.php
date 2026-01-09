@@ -9,7 +9,7 @@ class CriterionController extends Controller
 {
     public function index()
     {
-        $criteria = Criterion::all();
+        $criteria = Criterion::paginate(10);
         return view('criteria.index', compact('criteria'));
     }
 
@@ -51,5 +51,10 @@ class CriterionController extends Controller
     {
         $criterion->delete();
         return redirect()->route('criteria.index')->with('success', 'Kriteria dihapus!');
+    }
+    public function deleteAll()
+    {
+        \App\Models\Criterion::query()->delete();
+        return redirect()->back()->with('success', 'Semua data kriteria berhasil dihapus!');
     }
 }
